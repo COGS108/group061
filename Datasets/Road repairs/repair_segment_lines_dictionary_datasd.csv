@@ -1,0 +1,9 @@
+Field,Description,Possible values
+func_class,Functional Class,
+pvm_class,Pavement Class,a
+seg_id,SAP Segment ID,
+seg_length,Segment length in feet,
+seg_width,Segment width in feet,
+street,Street Name,
+st_from,Intersection segment start,
+st_to,Intersection segment end,

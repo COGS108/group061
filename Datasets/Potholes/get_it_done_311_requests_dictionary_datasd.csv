@@ -1,0 +1,13 @@
+﻿field,description,possible_values
+service_request_id,A unique identifier for each request that also serves as a customer's report number for tracking purposes,
+requested_datetime,The date and time when the service request was made,
+updated_datetime,"The date and time when the service request was last modified. For requests with a status of closed or closed-referred, this will be the date the request was closed",
+service_name,Name of the service request type,See list of services dataset
+case_record_type,A higher-level grouping of service names that corresponds to the City staff group responsible for responding to the request.,DSD: Development Services Department; ESD Complaint/Report: Environmental Services Department; Parking; Storm Water Code Enforcement; Traffic Engineering; TSW: Transportation and Storm Water Department; TSW ROW: Transportation and Storm Water Department code enforcement
+specify_the_issue,Detail on the type of illegal dumping service request. This field is only available in the illegal dumping specific dataset.,
+status,The current state of the service request,New; Assigned; Duplicate; Closed; Closed-Referred
+lat,Latitude for request location,
+long,Longitude for request location,
+district,Council district for request location,
+case_origin,Method by which the requestor submitted the request,
+referred_department,"When a case has a status of closed-referred, this field indicates to where the case was referred",

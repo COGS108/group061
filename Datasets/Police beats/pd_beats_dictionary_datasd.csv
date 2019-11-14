@@ -1,0 +1,6 @@
+field,field_type,description,possible_values
+objectid,Integar,Unique identifier,
+beat,Integar,"Beat number. Beats roll up into Service Areas, which roll up into Divisions.",
+div,Integar,Division number. Divisions are divided into Service Areas.,
+serv,Integar,Service Area number. Service Areas are divided into beats.,
+name,String,Beat name,
