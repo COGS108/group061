@@ -21,7 +21,7 @@ def convert_address(address):
 		return (-1, -1) # Invalid Coordinates
 		
 def main():
-	BATCH_SIZE = 100
+	BATCH_SIZE = 500
 	
 	df = pd.read_csv('Datasets/pd_collisions_datasd_v1.csv')
 	addresses_we_have = pd.read_csv('Datasets/Locations.csv').drop('Unnamed: 0', axis = 1)
