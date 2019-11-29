@@ -7,7 +7,14 @@ from tqdm import tqdm
 from pygeocoder import Geocoder
 
 def main():
+	BATCH_SIZE = 300
+	
 	df = pd.read_csv('Datasets/pd_collisions_datasd_v1.csv')
+	addresses_we_have = pd.read_csv('Datasets/Locations.csv').drop('Unnamed: 0', axis = 1)
+	
+	print(f'Current Size : {addresses_we_have.shape[0]} locations')
+	
+	df = df[addresses_we_have.shape[0]: min(df.shape[0], addresses_we_have.shape[0] + BATCH_SIZE)] # We only want to geocode the positions we don't have
 	
 	# Extracting Addresses from df
 	addresses = df.apply(lambda x : ' '.join(
@@ -24,8 +31,12 @@ def main():
 	addresses = addresses.to_frame().rename({0: 'Address'}, axis = 1)
 	addresses['Coordinates'] = addresses['Address'].progress_apply(lambda address : coder.geocode(address).coordinates)
 	
+	result = pd.concat([addresses_we_have, addresses])
+	
 	# Saving file
-	addresses.to_csv('Datasets/locations.csv')
+	result.to_csv('Datasets/locations.csv')
+	
+	print(f'Completed Batch, New Size : {result.shape[0]} locations')
 		
 if __name__ == '__main__':
 	main()
