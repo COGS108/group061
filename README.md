@@ -7,3 +7,11 @@ This repository will be frozen on the due date: 11:59pm on Tuesday, June 13th. N
 Your final project will be graded based solely on a project notebook.
 
 Make sure you have a notebook called 'FinalProject.ipynb' present in this repository by the due date.
+
+## Workflow for Pushing Changes
+
+- Create your own branch
+- After completing changes IN YOUR BRANCH:
+	- Add and commit all relevant files
+- Create a pull request for your changes if you thing there might be errors
+- Once someone has reviewed your code, it will be merged into `master`
