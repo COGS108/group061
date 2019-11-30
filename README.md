@@ -24,4 +24,4 @@ Squash your commits:
 Push to master
  - `git checkout master`
  - `git merge [YOUR BRANCH]`
- - `git push'
+ - `git push`
