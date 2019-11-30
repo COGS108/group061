@@ -9,9 +9,19 @@ Your final project will be graded based solely on a project notebook.
 Make sure you have a notebook called 'FinalProject.ipynb' present in this repository by the due date.
 
 ## Workflow for Pushing Changes
+After completing changes IN YOUR BRANCH:
+ - Add and commit all relevant files
+ 
+Update your branch to have the new master changes:
+ - `git checkout [YOUR BRANCH]`
+ - `git merge master`
+ - fix any merge conflicts
+ - test to make sure nothing broke
+ 
+Squash your commits:
+ - `git rebase -i HEAD~[NUMBER OF COMMITS]` OR `git rebase -i [SHA HASH OF FIRST COMMIT]`
 
-- Create your own branch
-- After completing changes IN YOUR BRANCH:
-	- Add and commit all relevant files
-- Create a pull request for your changes if you thing there might be errors
-- Once someone has reviewed your code, it will be merged into `master`
+Push to master
+ - `git checkout master`
+ - `git merge [YOUR BRANCH]`
+ - `git push'
