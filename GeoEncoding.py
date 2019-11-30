@@ -24,7 +24,7 @@ def convert_address(address):
 		
 def main():
 	global fails
-	BATCH_SIZE = 000
+	BATCH_SIZE = 3000
 	
 	df = pd.read_csv('Datasets/pd_collisions_datasd_v1.csv')
 	addresses_we_have = pd.read_csv('Datasets/Locations.csv').drop('Unnamed: 0', axis = 1)
